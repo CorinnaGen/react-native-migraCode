@@ -10,21 +10,18 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// Colors
+import colors from './src/styles/colors';
 
-
+// Components
+import CharacterList from './examples/CharactersList';
+import Message from './examples/Message';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? colors.dark : colors.light,
   };
 
   return (
@@ -33,37 +30,29 @@ function App() {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-        <Text>Hello migraCode!</Text>
-        </View>
-      </ScrollView>
+      <View style={backgroundStyle}>
+        <Text style={styles.title}>Hello MigraCode!</Text>
+      </View>
+      <Message>Let's play with React Native!</Message>
+      {/** <CharacterList /> */}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
+  title: {
+    paddingVertical: 32,
     paddingHorizontal: 24,
-  },
-  sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
   },
-  sectionDescription: {
-    marginTop: 8,
+  description: {
+    margin: 8,
     fontSize: 18,
     fontWeight: '400',
   },
-  highlight: {
-    fontWeight: '700',
+  content: {
+    backgroundColor: 'pink',
   },
 });
 
