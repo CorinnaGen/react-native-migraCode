@@ -16,6 +16,7 @@ import colors from './src/styles/colors';
 // Components
 import CharacterList from './examples/CharactersList';
 import Message from './examples/Message';
+import WelcomeScreen from './examples/Welcome';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -35,6 +36,7 @@ function App() {
       </View>
       <Message>Let's play with React Native!</Message>
       {/** <CharacterList /> */}
+      <WelcomeScreen />
     </SafeAreaView>
   );
 }

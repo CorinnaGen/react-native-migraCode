@@ -4,7 +4,7 @@ import {View, Text, Image, StyleSheet, StyleSheet} from 'react-native';
 // Styles
 import colors from '../src/styles/colors';
 
-const App = props => {
+const Welcome = props => {
   return (
     <View style={styles.main}>
       <Text style={styles.title}>We're ready to roll!</Text>
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Welcome;
