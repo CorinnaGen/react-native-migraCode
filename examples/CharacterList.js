@@ -20,13 +20,12 @@ const CharacterList = () => {
       }
       setIsLoading(false);
     };
-    // Call the fetchData function
+    // Call the fetchData function, useEffect can't use directly an async function
     fetchData();
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Rick and Morty Characters</Text>
       {isLoading ? (
         <Text>Loading...</Text>
       ) : (

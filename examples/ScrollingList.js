@@ -1,36 +1,32 @@
 import React from 'react';
-import {View, ScrollView, Text, StyleSheet} from 'react-native';
+import {ScrollView, View, Text, StyleSheet} from 'react-native';
 
-const ScrollViewExample = () => {
-  const data = [
-    {id: 1, text: 'Item 1'},
-    {id: 2, text: 'Item 2'},
-    {id: 3, text: 'Item 3'},
-  ];
+const ScrollingList = ({isHorizontal = false}) => {
   return (
-    <ScrollView style={styles.container}>
-      {data.map(item => (
-        <View key={item.id} style={styles.item}>
-          <Text>{item.text}</Text>
-        </View>
-      ))}
+    <ScrollView horizontal={isHorizontal}>
+      <View style={styles.item}>
+        <Text>Item 1</Text>
+      </View>
+      <View style={styles.item}>
+        <Text>Item 2</Text>
+      </View>
+      <View style={styles.item}>
+        <Text>Item 3</Text>
+      </View>
+      {/* Add more items as needed */}
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
   item: {
-    flexDirection: 'row',
+    width: 200,
+    height: 200,
+    backgroundColor: 'lightblue',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 100,
-    backgroundColor: '#e0e0e0',
-    marginBottom: 10,
+    margin: 10,
   },
 });
 
-export default ScrollViewExample;
+export default ScrollingList;

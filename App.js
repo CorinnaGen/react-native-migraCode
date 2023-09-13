@@ -14,9 +14,10 @@ import {
 import colors from './src/styles/colors';
 
 // Components
-import CharacterList from './examples/CharactersList';
+import CharacterList from './examples/CharacterList';
 import Message from './examples/Message';
 import WelcomeScreen from './examples/Welcome';
+import ScrollingList from './examples/ScrollingList';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -35,8 +36,9 @@ function App() {
         <Text style={styles.title}>Hello MigraCode!</Text>
       </View>
       <Message>Let's play with React Native!</Message>
-      {/** <CharacterList /> */}
-      <WelcomeScreen />
+      <CharacterList />
+      {/* <WelcomeScreen /> */}
+      {/* <ScrollingList isHorizontal={true} /> */}
     </SafeAreaView>
   );
 }
