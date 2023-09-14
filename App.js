@@ -18,6 +18,7 @@ import CharacterList from './examples/CharacterList';
 import Message from './examples/Message';
 import WelcomeScreen from './examples/Welcome';
 import ScrollingList from './examples/ScrollingList';
+import MyAppNavigation from './examples/Navigation';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,7 +28,7 @@ function App() {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={[backgroundStyle, {flex: 1}]}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -37,6 +38,7 @@ function App() {
       </View>
       <Message>Let's play with React Native!</Message>
       <CharacterList />
+      <MyAppNavigation />
       {/* <WelcomeScreen /> */}
       {/* <ScrollingList isHorizontal={true} /> */}
     </SafeAreaView>
