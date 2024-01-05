@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import {fontSize, margin} from './src/styles/helpers';
 
 const CharacterList = () => {
   const [characterData, setCharacterData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    // Define a function to fetch data from the API
     const fetchData = async () => {
       setIsLoading(true);
       try {
@@ -61,13 +61,13 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    marginRight: margin.right.M,
+    marginRight: 16,
   },
   characterDetails: {
     flex: 1,
   },
   characterName: {
-    fontSize: fontSize.M,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });
