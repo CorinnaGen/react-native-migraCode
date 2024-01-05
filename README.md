@@ -18,6 +18,6 @@ Check the code in the examples folder, be sure you are understaanding everything
 - Use the react-navigation library to make possible to navigate to a single page where all the characters details ( if you choose rick and morty api) or more details of your elements are show.
 - If the api you chose, offers pagination, implement it too.
 - Add a search bar in your home, which will give the user the possibility to filter by a keyword
-- Make it prettiers!
+- Make it prettier!
 - Show us your progress in the MigraCode general channel!
 
